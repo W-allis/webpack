@@ -1,14 +1,30 @@
 {
-  "name": "webpack",
+  "name": "webpack_project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:base": "webpack --config ./build/webpack.base.conf.js",
+    "dev": "webpack-dev-server --hot --config ./build/webpack.dev.conf.js",
+    "build:dev": "cross-env --env.BASE_ENV=dev webpack --config ./build/webpack.prod.conf.js",
+    "build:prod": "cross-env --env.BASE_ENV=prod webpack --config ./build/webpack.prod.conf.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cross-env": "^5.2.0"
+    "clean-webpack-plugin": "^1.0.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.3.1",
+    "path": "^0.12.7",
+    "webpack": "^4.25.1",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4",
+    "webpack-server": "^0.1.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.2"
   }
 }
