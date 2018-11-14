@@ -17,9 +17,9 @@ module.exports = {
   },
   build: {
     // 线上发布地址添加在index.html js script.src 之前 
-    assetsPublicPath: './test',
+    assetsPublicPath: '/',
     // 如果是测试环境的话暂不支持此功能
-    _assetsPublicPath: './bar',
+    _assetsPublicPath: '/',
 
     staticPath: './static',
 

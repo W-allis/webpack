@@ -4,7 +4,6 @@
  */
 var merge = require('webpack-merge')
 var baseConfig = require('./webpack.base.conf')
-var htmlWebpackPlugin = require('html-webpack-plugin')
 var config = require('../config')
 var env = require('../config/dev.env')
 var webpack = require('webpack')
@@ -21,13 +20,6 @@ module.exports = merge(baseConfig, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': env
-    }),
-    new htmlWebpackPlugin({
-      filename: 'index.html',
-      template: './index.html',
-      inject: 'body',
-      chunks: ['jquery', 'main'],
-      favicon: './favicon.ico'
     })
   ]
 })
